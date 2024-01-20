@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="489.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <MenuBar prefHeight="25.0" prefWidth="489.0" AnchorPane.bottomAnchor="334.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="342.0" prefWidth="565.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Button fx:id="buttonCreate" layoutX="395.0" layoutY="282.0" mnemonicParsing="false" onAction="#create" text="Erstellen" />
+            <Label layoutX="38.0" layoutY="34.0" prefHeight="25.0" prefWidth="49.0" text="Name:" AnchorPane.bottomAnchor="275.0" />
+            <Label layoutX="38.0" layoutY="73.0" prefHeight="25.0" prefWidth="36.0" text="Team:" AnchorPane.bottomAnchor="236.0" />
+            <Label layoutX="38.0" layoutY="116.0" text="Deadline:" AnchorPane.bottomAnchor="201.0" />
+            <Label layoutX="37.0" layoutY="151.0" text="Beschreibung:" AnchorPane.bottomAnchor="166.0" />
+            <TextField fx:id="textFieldGetName" layoutX="119.0" layoutY="34.0" prefHeight="25.0" prefWidth="250.0" AnchorPane.bottomAnchor="275.0" />
+            <TextArea fx:id="textAreaGetDescription" layoutX="119.0" layoutY="151.0" prefHeight="171.0" prefWidth="250.0" AnchorPane.bottomAnchor="12.0" />
+            <ChoiceBox fx:id="choiceBoxChooseTeam" layoutX="120.0" layoutY="73.0" prefHeight="25.0" prefWidth="250.0" />
+            <DatePicker fx:id="datePickerDeadline" layoutX="118.0" layoutY="112.0" prefHeight="25.0" prefWidth="250.0" />
+            <Text fx:id="textCheckInputs" fill="RED" layoutX="376.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eingaben prüfen!" visible="false" wrappingWidth="99.1875" />
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>
