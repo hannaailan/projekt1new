@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="700.0" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar prefHeight="20.0" prefWidth="700.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="labelFirstHeading" layoutX="212.0" layoutY="69.0" prefHeight="25.0" prefWidth="294.0" text="Bearbeitungszeiten Aufgaben/Mitarbeiter" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBoxSelectProject" layoutX="234.0" layoutY="111.0" prefHeight="25.0" prefWidth="250.0" />
+      <Button fx:id="buttonRevealStatistics" layoutX="495.0" layoutY="111.0" mnemonicParsing="false" onAction="#revealStatistics" prefHeight="25.0" prefWidth="126.0" text="Statistiken Anzeigen" />
+      <Label fx:id="labelTasks" layoutX="403.0" layoutY="160.0" text="Aufgaben" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDevelopers" layoutX="186.0" layoutY="160.0" text="Mitarbeiter" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSecondHeading" layoutX="100.0" layoutY="291.0" text="Entwickler mit den meisten bearbeiteten Aufgaben in den letzten 7 Tagen" underline="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewRanking" editable="true" layoutX="69.0" layoutY="325.0" prefHeight="200.0" prefWidth="565.0">
+         <columns>
+            <TableColumn fx:id="tableColoumnRank" editable="false" minWidth="40.0" prefWidth="49.0" sortType="DESCENDING" text="Rang" />
+            <TableColumn fx:id="tableColumnDevID" editable="false" minWidth="31.0" prefWidth="49.0" sortType="DESCENDING" text="DevID" />
+            <TableColumn fx:id="tableColumnWorkers" editable="false" minWidth="188.0" prefWidth="360.0" sortType="DESCENDING" text="Mitarbeiter" />
+            <TableColumn fx:id="tableColumnTaskCount" editable="false" minWidth="0.0" prefWidth="106.0" sortType="DESCENDING" text="Anzahl Aufgaben" />
+         </columns>
+      </TableView>
+      <Label fx:id="labelMinDevs" layoutX="186.0" layoutY="189.0" prefHeight="17.0" prefWidth="69.0" text="Minimum:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelMaxDevs" layoutX="187.0" layoutY="221.0" prefHeight="17.0" prefWidth="69.0" text="Maximum:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAvgDevs" layoutX="187.0" layoutY="251.0" prefHeight="20.0" prefWidth="92.0" text="Durchschnitt:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelMinTasks" layoutX="403.0" layoutY="190.0" prefHeight="17.0" prefWidth="69.0" text="Minimum:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelMaxTasks" layoutX="403.0" layoutY="221.0" prefHeight="17.0" prefWidth="69.0" text="Maximum:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAvgTasks" layoutX="403.0" layoutY="251.0" prefHeight="20.0" prefWidth="92.0" text="Durchschnitt:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldGetMinDevs" editable="false" layoutX="280.0" layoutY="188.0" prefHeight="25.0" prefWidth="80.0" />
+      <TextField fx:id="textFieldGetMaxDevs" editable="false" layoutX="280.0" layoutY="219.0" prefHeight="25.0" prefWidth="80.0" />
+      <TextField fx:id="textFieldGetAvgDevs" editable="false" layoutX="280.0" layoutY="249.0" prefHeight="25.0" prefWidth="80.0" />
+      <TextField fx:id="textFieldGetMinTasks" editable="false" layoutX="495.0" layoutY="188.0" prefHeight="25.0" prefWidth="80.0" />
+      <TextField fx:id="textFieldGetMaxTasks" editable="false" layoutX="495.0" layoutY="219.0" prefHeight="25.0" prefWidth="80.0" />
+      <TextField fx:id="textFieldGetAvgTasks" editable="false" layoutX="495.0" layoutY="249.0" prefHeight="25.0" prefWidth="80.0" />
+      <Label fx:id="labelStatistics" layoutX="305.0" layoutY="35.0" text="Statistiken" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</fx:root>
